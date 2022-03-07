@@ -15,6 +15,7 @@ public class ThreadSyncLock extends Thread{
     }
     @Override
     public void run() {
+        //using Java locks we can lock and unlock in different methods
         lock.lock();
         System.out.println("Lock acquired by Thread: " + Thread.currentThread().getName());
         try {
