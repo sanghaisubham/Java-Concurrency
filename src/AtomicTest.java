@@ -1,7 +1,11 @@
 import java.util.concurrent.atomic.AtomicInteger;
 
-// Thread-safe means that a method or class instance can be used by multiple threads at the same time without any problem.
-//Volatile variables have the visibility features of synchronized but not the atomicity features
+// Atomic classes help to implement nonblocking data structures achieving higher throughput
+
+//Unlike locks, no other thread gets suspended; instead,
+// they're simply informed that they did not manage to update the value.
+// The threads can then proceed to do further work and context switches are completely avoided.
+
 public class AtomicTest {
     private static AtomicInteger counter = new AtomicInteger(0);
     private static int counterNormal = 0;
